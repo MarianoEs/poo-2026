@@ -4,4 +4,6 @@
 
 //Ejemplo2 ej2 = new Ejemplo2();
 
-Ejemplo3 ej3 = new Ejemplo3();
+//Ejemplo3 ej3 = new Ejemplo3();
+
+Ejemplo4 ej4 = new Ejemplo4();

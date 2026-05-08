@@ -45,7 +45,13 @@ namespace poo_2026
         public PracticaConstructor(string nombre, int edad) //: this()
         {
             Nombre = nombre;
+            Edad = edad;
+        }
+
+        public PracticaConstructor(int edad, string nombre) //: this()
+        {
+            Nombre = nombre;
             Edad = 20;
         }
-    }
+    } 
 }
