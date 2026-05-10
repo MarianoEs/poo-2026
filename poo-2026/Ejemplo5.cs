@@ -5,7 +5,7 @@ using System.Text;
 
 namespace poo_2026
 {
-
+    
     public class Ejemplo5
     {
         //public Ejemplo5()  // Constructor
@@ -40,6 +40,7 @@ namespace poo_2026
 
     }
 
+    //Clases
     public class PersonaBD : IBuscarPersona
     {
         public void ObtenerPersona(int id)
