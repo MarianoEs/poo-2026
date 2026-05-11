@@ -22,7 +22,7 @@ namespace poo_2026
            
             producto.Id = 20;
             Console.WriteLine(producto.MostrarId());
-            Console.WriteLine(producto.MostrarProducto();
+            Console.WriteLine(producto.MostrarProducto());
             producto.IncrementarId();
             //producto.MetodoProtegido();
 

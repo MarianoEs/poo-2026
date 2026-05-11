@@ -48,6 +48,11 @@ namespace poo_2026
 
     public static class Util
     {
+        public static void Imprimir (string texto)
+        {
+            Console.WriteLine(texto);
+        }
+
         public static string MensajeError(string mensaje = "",
                                             Exception? e = null,
                                             bool conTrace = false,
