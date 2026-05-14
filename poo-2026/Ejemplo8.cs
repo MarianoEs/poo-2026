@@ -14,33 +14,43 @@ namespace poo_2026
         DateTime[] fechas = { new DateTime(2020, 1, 1), new DateTime(2021, 2, 15), new DateTime(2022, 3, 30) };
 
         public Ejemplo8()
+
         {
+            #region Metodos y Clases genericas
+
             //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos(numeros)}");
-           //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos(numeros)}");
-           //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos(numeros)}");
+            //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos(palabras)}");
+            //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos(fechas)}");
 
 
             //Util.Imprimir($"Cantidad de números: {Utilidades.CantidadDeElementos<int>(numeros)}");
-           // Util.Imprimir($"Cantidad de palabras: {Utilidades.CantidadDeElementos<string>(palabras)}");
-           // Util.Imprimir($"Cantidad de fechas: {Utilidades.CantidadDeElementos<DateTime>(fechas)}");
+            //Util.Imprimir($"Cantidad de palabras: {Utilidades.CantidadDeElementos<string>(palabras)}");
+            //Util.Imprimir($"Cantidad de fechas: {Utilidades.CantidadDeElementos<DateTime>(fechas)}");
 
-            UtilidadesArrgelo<int> utilInt = new UtilidadesArrgelo<int>();
-            Util.Imprimir($"Primer elemento o valor por defecto: {utilInt.PrimerElementoOValorPorDefecto(numeros)}");
-            Util.Imprimir($"Primer elemento o valor por defecto: {utilInt.PrimerElementoOValorPorDefecto(numerosSinDatos)}");
+            //UtilidadesArrgelo<int> utilInt = new UtilidadesArrgelo<int>();
+            //Util.Imprimir($"Primer elemento o valor por defecto: {utilInt.PrimerElementoOValorPorDefecto(numeros)}");
+            //Util.Imprimir($"Primer elemento o valor por defecto: {utilInt.PrimerElementoOValorPorDefecto(numerosSinDatos)}");
 
-            Console.WriteLine("---------------------------------------------");
+            //Console.WriteLine("---------------------------------------------");
 
-            UtilidadesArrgelo<string> utilString = new UtilidadesArrgelo<string>();
-            Util.Imprimir($"Primer elemento o valor por defecto: {utilString.PrimerElementoOValorPorDefecto(palabras)}");
-            Util.Imprimir($"Primer elemento o valor por defecto: {utilString.PrimerElementoOValorPorDefecto(nombres)}");
+            //UtilidadesArrgelo<string> utilString = new UtilidadesArrgelo<string>();
+            //Util.Imprimir($"Primer elemento o valor por defecto: {utilString.PrimerElementoOValorPorDefecto(palabras)}");
+            //Util.Imprimir($"Primer elemento o valor por defecto: {utilString.PrimerElementoOValorPorDefecto(nombres)}");
 
-            Console.WriteLine("---------------------------------------------");
+            //Console.WriteLine("---------------------------------------------");
 
-            UtilidadesArrgelo<DateTime> utilfecha = new UtilidadesArrgelo<DateTime>();
-            Util.Imprimir($"Primer elemento o valor por defecto: {utilfecha.PrimerElementoOValorPorDefecto(fechas).ToString("dd/MM/yy")}");
+            //UtilidadesArrgelo<DateTime> utilfecha = new UtilidadesArrgelo<DateTime>();
+            //Util.Imprimir($"Primer elemento o valor por defecto: {utilfecha.PrimerElementoOValorPorDefecto(fechas).ToString("dd/MM/yy")}");
 
-            Util.Imprimir($"Ultimo elemento o valor por defecto: {utilfecha.UltimoElementoOValorPorDefecto(fechas).ToString("dd/MM/yy")}");
+            //Util.Imprimir($"Ultimo elemento o valor por defecto: {utilfecha.UltimoElementoOValorPorDefecto(fechas).ToString("dd/MM/yy")}");
+            #endregion
 
+            #region Control de Restricciones
+
+            UtilidadesArrgelo<IVehiculo> utilVehiculo = new UtilidadesArrgelo<IVehiculo>();
+
+            UtilidadesArrgelo<Auto> utilAuto = new UtilidadesArrgelo<Auto>(); 
+            #endregion
         }
     }
 
@@ -67,7 +77,11 @@ namespace poo_2026
           }
     }
 
-    public class UtilidadesArrgelo<T> 
+    //public class UtilidadesArrgelo<T>
+    //public class UtilidadesArrgelo<T> where T : struct
+    //public class UtilidadesArrgelo<T> where T : new()
+    //public class UtilidadesArrgelo<T> where T : class
+    public class UtilidadesArrgelo<T> where T : IVehiculo, new()
     {
         public T PrimerElementoOValorPorDefecto(T[] arreglo) 
         {
@@ -77,7 +91,7 @@ namespace poo_2026
             }
             else 
             {
-                return default(T);
+                return default (T);
             }
         }
 
@@ -93,4 +107,26 @@ namespace poo_2026
             }
         }
     }
+    public class IVehiculo : IVhiculo
+    {
+
+
+    }
+
+    public class Auto : IVehiculo
+    {
+        private string Marca;
+        public Auto (string marca)
+        {
+            Marca = marca;
+        }
+        public Auto()
+        {
+            
+        }
+
+
+
+    }
+
 }
