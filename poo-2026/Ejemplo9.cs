@@ -63,8 +63,13 @@ namespace poo_2026
             //  }
 
 
-            Console.WriteLine($"Cantidad de elementos: {listaNombres.Count}");
-            
+            Console.WriteLine($"Cantidad de elementos: {listaNombres.Count}"); //Lista la cantidad de elementos
+
+            foreach (var item in listaNombres)
+            {
+                Console.WriteLine(item);
+            }
+
 
             Console.WriteLine("-------------------------------------");
 
