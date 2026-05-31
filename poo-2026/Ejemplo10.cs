@@ -59,6 +59,11 @@ namespace poo_2026
         public string Cod { get; set; }
         public string Nombre { get; set; }
         public int CantHabitantes { get; set; }
+
+        public string ToString() 
+        {
+         return $"{Cod} - {Nombre} - {CantHabitantes}";
+        }
     }
 
 }
