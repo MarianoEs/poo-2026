@@ -37,4 +37,7 @@
 
 //Ejemplo8 ej = new Ejemplo8();
 
-Ejemplo9 ej = new Ejemplo9();
+//Ejemplo9 ej = new Ejemplo9();
+
+Ejemplo10 ej = new Ejemplo10();
+
