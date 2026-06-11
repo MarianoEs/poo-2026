@@ -60,7 +60,7 @@ namespace poo_2026
         public string Nombre { get; set; }
         public int CantHabitantes { get; set; }
 
-        public string ToString() 
+        public override string ToString() 
         {
          return $"{Cod} - {Nombre} - {CantHabitantes}";
         }
