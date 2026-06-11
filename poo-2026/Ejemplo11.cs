@@ -44,13 +44,10 @@ namespace poo_2026
                 Console.WriteLine($"Evaluando si es par {n}");
                 return n % 2 == 0;
 
-            }); //.ToList();
+            //CONSULTAS COMPLEJAS
+            var provinciasConsulta = provincias.Where (p => p.CantHabitantes > 1000000 
+                                                        && p.Nombre.Substring (0, 1) == "B").ToList();
 
-            Console.WriteLine("Empezando");
-            foreach (var item in numerosPares)
-            {
-                Console.WriteLine($"Numero par {item}");
-            }
 
         }
     }
